@@ -31,22 +31,9 @@ const allUsers = [
   }
 ];
 
-const getUsersWithFriend = (users, friendName) => {
-	const arrayFriends = [];
-	return users.filter(user => user.name) 
-}
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
 
-
-
-
-
-
-
-
-
-
-
-console.log(getUsersWithFriend(allUsers, 'Briana Decker')); 
+console.table(getUsersWithFriend(allUsers, 'Briana Decker')); 
 // [
 //   {
 //     name: 'Sharlene Bush',
@@ -58,7 +45,7 @@ console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
 //   }
 // ]
 
-console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
+console.table(getUsersWithFriend(allUsers, 'Goldie Gentry'));
 // [
 //   {
 //     name: 'Elma Head',
@@ -71,14 +58,3 @@ console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
 // ]
 
 console.log(getUsersWithFriend(allUsers, 'Adrian Cross' )); // []
-
-
-
-
-
-
-
-
-
-
-
